@@ -1,0 +1,33 @@
+ion-content {
+  --background: #f0f0f0; /* Fondo suave */
+}
+
+.profesor-image {
+  width: 100%; /* Imagen ajustada al 100% del contenedor */
+  max-width: 250px; /* Tamaño máximo */
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  margin-bottom: 20px; /* Separación entre la imagen y el botón */
+  animation: growShrink 5s ease-in-out infinite; /* Animación de crecimiento y reducción */
+}
+
+@keyframes growShrink {
+  0%, 100% {
+    transform: scale(1); /* Tamaño original */
+  }
+  50% {
+    transform: scale(1.1); /* Tamaño aumentado */
+  }
+}
+
+ion-button {
+  --border-radius: 12px; /* Bordes redondeados */
+  font-size: 1.2rem; /* Tamaño de fuente más grande */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra del botón */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Animación suave */
+}
+
+ion-button:hover {
+  transform: translateY(-2px); /* Efecto hover de elevación */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al hover */
+}

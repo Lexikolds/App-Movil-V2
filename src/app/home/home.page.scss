@@ -1,0 +1,91 @@
+ion-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(100px); /* Posición inicial para la animación */
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards; /* Animación */
+}
+
+.profesor-image {
+  width: 150px; /* Ajusta el tamaño de la imagen */
+  height: 150px;
+  border-radius: 50%; /* Para hacer la imagen circular */
+  object-fit: cover;
+  margin-bottom: 20px;
+  animation: imageFadeIn 1.5s ease-in-out forwards; /* Animación */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  transform: scale(0); /* Posición inicial para la animación */
+  opacity: 0;
+}
+
+/* Animación para la imagen */
+@keyframes imageFadeIn {
+  to {
+    transform: scale(1); /* Escala la imagen a su tamaño original */
+    opacity: 1;
+  }
+}
+
+.animated-title {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+ion-item, ion-button {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.fade-in-item {
+  animation-delay: 0.4s;
+}
+
+.fade-in-button {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+ion-button {
+  --background: #1f207a;
+  border-radius: 20px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+ion-button:hover {
+  transform: scale(1.05); /* Efecto de hover */
+  --background: #21527c;
+}
+
+ion-input {
+  --placeholder-color: #aaa;
+}
+
+ion-grid, ion-row, ion-col {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-content {
+  --background: linear-gradient(to bottom right, #2e6a9e, #302174);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

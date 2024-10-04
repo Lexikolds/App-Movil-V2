@@ -1,0 +1,33 @@
+.qr-image {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  display: block;
+  animation: pulse 2s infinite; /* Animación continua */
+}
+
+/* Definición de la animación pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Tamaño normal */
+  }
+  50% {
+    transform: scale(1.1); /* Crece ligeramente */
+  }
+  100% {
+    transform: scale(1); /* Vuelve al tamaño normal */
+  }
+}
+
+ion-button {
+  margin-top: 20px;
+  border-radius: 12px; /* Bordes redondeados */
+}
+
+ion-row {
+  margin-top: 30px;
+}
+
+ion-content {
+  --background: linear-gradient(to top right, #43cea2, #26257e);
+}
